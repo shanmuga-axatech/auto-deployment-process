@@ -1,0 +1,19 @@
+{
+    "Admin Lieder":[{
+        "source": { 
+                "framework":"C:/wamp64/www/webhop/framework",
+                "folder1":"C:/wamp64/www/webhop/lieder.axa-assistance.com/adminlieder"
+        }, 
+        "target":{ 
+                "framework": "C:/wamp64/www/testpro/Master/webhop-admin-lieder-1/framework", 
+                "folder1":"C:/wamp64/www/testpro/Master/webhop-admin-lieder-1/lieder.axa-assistance.com/adminlieder"
+        }, 
+        "git":{ 
+            "Stash" : "git stash", 
+            "Pull" : "git pull", 
+            "Stash Apply" : "git stash pop", 
+            "Comment" : "git commit -m ''", 
+            "Push" : "git push" 
+        }
+    }]
+}
