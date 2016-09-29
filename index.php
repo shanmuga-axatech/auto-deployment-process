@@ -21,11 +21,13 @@ foreach ($json as $key => $main_result) {
 	//------------- Main Loop Section starts from here ---------------------------
 	if($total_count!=0):
 		for ($i=0; $i < $total_count; $i++) { 
-			$source_path = $source_list[$i];
-			$target_path = $target_list[$i];
-			$command = 'cp -R ' . $source_path . ' ' .$target_path; 
-			exec($command);
-			echo "Successfully copied. You can commit your file now in git";
+			$source_path = isset($source_list[$i])?$source_list[$i]:"";
+			$target_path = isset($target_list[$i])?$target_list[$i]:"";
+			if($source_path!="" && $target_path!=""){
+				$command = 'cp -R ' . $source_path . ' ' .$target_path; 
+				exec($command);
+				echo "Successfully copied. You can commit your file now in git";
+			} else { echo "Source or Target path is empty. Please try again!"; }
 		}
 	else:
 		echo "we couldnot find source and destination in ".$key;
